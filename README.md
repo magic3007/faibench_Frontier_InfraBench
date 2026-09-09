@@ -30,6 +30,7 @@
 - [Important Conventions](#important-conventions)
 - [Reproducibility](#reproducibility)
 - [Package Verification](#package-verification)
+- [Community](#community)
 - [License](#license)
 
 ## Can LLMs Engineer the Infrastructure That Powers Them?
@@ -178,6 +179,10 @@ every `RUN` shell body passes `bash -n`) · anchor and caveat consistent · **ex
 and fail in reverse) · no `__pycache__` / `*.bak` leftovers · **the runnable triad** (each task's `pre_artifacts.sh`
 and `solution/solve.sh` exist, are executable, pass `bash -n`; `solve.sh` has a four-state CLI; `task.toml` is
 `schema_version="2.0"`). `tasks_index.json` ships with the package; you do not need to rebuild it.
+
+## Community
+
+We thank [LINUX DO](https://linux.do/) open-source community for providing a platform for technical discussion and knowledge sharing.
 
 ## License
 
