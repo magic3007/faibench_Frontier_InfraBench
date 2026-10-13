@@ -48,7 +48,7 @@
 #   Sanity: noop (no patch) ~= 1.0 -> gated to 0; negative MUST score 0.
 #
 # VERSION ANCHORS
-#     Python 3.11 · torch 2.7.0 (CPU wheel)
+#     Python 3.11 · torch 2.7.0 (CPU wheel) · numpy 1.26.4 · psutil 6.1.1
 #   The original private base declared torch 2.5.1 / triton 3.1.0 and the task overlay then ran
 #   `pip install torch==2.7.0` — 2.7.0 is therefore the version the anchor was calibrated under.
 # =============================================================================
@@ -68,6 +68,10 @@ ENV VENV=/opt/kernelbench-venv
 RUN python3 -m venv "$VENV"
 ENV PATH=$VENV/bin:$PATH
 RUN pip install --no-cache-dir -U pip setuptools wheel
+# ColossalAI imports numpy and psutil even for this CPU-only device-mesh task;
+# torch does not install them. Install pinned versions from PyPI before the
+# CPU-wheel-only index below, including numpy before torch's import check.
+RUN pip install --no-cache-dir "numpy==1.26.4" "psutil==6.1.1"
 # ---- CPU-ONLY torch on purpose: task.toml declares gpus = 0. The CPU wheel runs the SAME ATen
 #      CPU kernels as the CUDA build, so numerics are unchanged, and the image is ~8 GB smaller. ----
 RUN pip install --no-cache-dir --index-url https://download.pytorch.org/whl/cpu "torch==${TORCH_VERSION}" \
@@ -147,6 +151,9 @@ WORKDIR /app/repo
 #      thing at scoring time via its import-origin gate) and the scope files are present. ----
 RUN python - <<'PY'
 import os, subprocess, sys
+import numpy
+import psutil
+print("runtime dependencies:", "numpy", numpy.__version__, "psutil", psutil.__version__)
 sys.path.insert(0, "/app/repo")
 for f in ('colossalai/device/device_mesh.py',):
     p = os.path.join("/app/repo", f)
