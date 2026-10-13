@@ -153,7 +153,7 @@ docker run --rm [--gpus all] -v "$PWD/tests:/tests:ro" -v "$PWD/solution:/patche
   -e KERNELBENCH_VERIFY_MODE=oracle -e KERNELBENCH_ORACLE_FILE=/patches/kernel_oracle.py
 ```
 
-Self-attestation: `noop` (no change) should score ≈ the no-op value; `negative` must score 0. **83 tasks ship a reference patch/oracle** and can use this path directly; only 2 tasks (`kfc/wro-offload-layer-prefetch-ring-pipeline-loop16`, `kfc/wro-offload-policy-grid-search-loop16`) do not, and their caveats note "anchor is not comparable across hardware — calibrate it yourself."
+Self-attestation: `noop` (no change) should score ≈ the no-op value; `negative` must score 0. **83 tasks ship a reference patch/oracle** and can use this path directly; only 2 tasks (`kfc/wro-offload-layer-prefetch-ring-pipeline-loop1`, `kfc/wro-offload-policy-grid-search-loop1`) do not, and their caveats note "anchor is not comparable across hardware — calibrate it yourself."
 
 **Note the anchor resolution chain**: `tests/ref_speedup.txt` → in-image `/opt/verifier-correctness-manifest.json` → 1.0. The in-image copy **deliberately omits the real anchor** (it is readable by the solver), and `ref_speedup <= 1` is a hard gate, so **you must mount `tests/`** — otherwise it fails loudly with "anchor invalid" rather than emitting a wrong score. Also, `tests/ref_speedup.txt` is parsed with `tr -dc '0-9.'` — **do not add any comments to it**; any text containing digits or a decimal point will pollute the anchor value.
 

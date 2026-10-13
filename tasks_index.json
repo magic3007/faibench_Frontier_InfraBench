@@ -226,8 +226,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-coalesced-vectorized-transpose-loop16",
-      "package_root": "tasks/kfc/insea-coalesced-vectorized-transpose-loop16/task",
+      "task": "insea-coalesced-vectorized-transpose-loop1",
+      "package_root": "tasks/kfc/insea-coalesced-vectorized-transpose-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -252,8 +252,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-contiguous-mem-pool-defrag-coalesce-loop16",
-      "package_root": "tasks/kfc/insea-contiguous-mem-pool-defrag-coalesce-loop16/task",
+      "task": "insea-contiguous-mem-pool-defrag-coalesce-loop1",
+      "package_root": "tasks/kfc/insea-contiguous-mem-pool-defrag-coalesce-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -278,8 +278,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-cpu-int4xint8-quantized-dot-loop16",
-      "package_root": "tasks/kfc/insea-cpu-int4xint8-quantized-dot-loop16/task",
+      "task": "insea-cpu-int4xint8-quantized-dot-loop1",
+      "package_root": "tasks/kfc/insea-cpu-int4xint8-quantized-dot-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -304,8 +304,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-dsl-index-symbolic-simplifier-loop16",
-      "package_root": "tasks/kfc/insea-dsl-index-symbolic-simplifier-loop16/task",
+      "task": "insea-dsl-index-symbolic-simplifier-loop1",
+      "package_root": "tasks/kfc/insea-dsl-index-symbolic-simplifier-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -330,8 +330,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-fused-softmax-cross-entropy-grad-loop16",
-      "package_root": "tasks/kfc/insea-fused-softmax-cross-entropy-grad-loop16/task",
+      "task": "insea-fused-softmax-cross-entropy-grad-loop1",
+      "package_root": "tasks/kfc/insea-fused-softmax-cross-entropy-grad-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -356,8 +356,8 @@
     },
     {
       "bench": "kfc",
-      "task": "insea-h2d-prefetch-compute-overlap-loop16",
-      "package_root": "tasks/kfc/insea-h2d-prefetch-compute-overlap-loop16/task",
+      "task": "insea-h2d-prefetch-compute-overlap-loop1",
+      "package_root": "tasks/kfc/insea-h2d-prefetch-compute-overlap-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -692,8 +692,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wli-fla-retention-chunkscan-loop16",
-      "package_root": "tasks/kfc/wli-fla-retention-chunkscan-loop16/task",
+      "task": "wli-fla-retention-chunkscan-loop1",
+      "package_root": "tasks/kfc/wli-fla-retention-chunkscan-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -718,8 +718,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-cloud-catalog-cost-select-loop16",
-      "package_root": "tasks/kfc/wre-cloud-catalog-cost-select-loop16/task",
+      "task": "wre-cloud-catalog-cost-select-loop1",
+      "package_root": "tasks/kfc/wre-cloud-catalog-cost-select-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -742,8 +742,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-diloco-comm-chunk-balance-loop16",
-      "package_root": "tasks/kfc/wre-diloco-comm-chunk-balance-loop16/task",
+      "task": "wre-diloco-comm-chunk-balance-loop1",
+      "package_root": "tasks/kfc/wre-diloco-comm-chunk-balance-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -768,8 +768,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-kvoffload-lfu-admit-sketch-loop16",
-      "package_root": "tasks/kfc/wre-kvoffload-lfu-admit-sketch-loop16/task",
+      "task": "wre-kvoffload-lfu-admit-sketch-loop1",
+      "package_root": "tasks/kfc/wre-kvoffload-lfu-admit-sketch-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -794,8 +794,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-modelload-mmap-multi-route-loop16",
-      "package_root": "tasks/kfc/wre-modelload-mmap-multi-route-loop16/task",
+      "task": "wre-modelload-mmap-multi-route-loop1",
+      "package_root": "tasks/kfc/wre-modelload-mmap-multi-route-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -820,8 +820,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-parallel-all2all-redistribute-loop16",
-      "package_root": "tasks/kfc/wre-parallel-all2all-redistribute-loop16/task",
+      "task": "wre-parallel-all2all-redistribute-loop1",
+      "package_root": "tasks/kfc/wre-parallel-all2all-redistribute-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -844,8 +844,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-router-power-of-two-choices-loop16",
-      "package_root": "tasks/kfc/wre-router-power-of-two-choices-loop16/task",
+      "task": "wre-router-power-of-two-choices-loop1",
+      "package_root": "tasks/kfc/wre-router-power-of-two-choices-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -870,8 +870,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-runtime-memplan-arena-loop16",
-      "package_root": "tasks/kfc/wre-runtime-memplan-arena-loop16/task",
+      "task": "wre-runtime-memplan-arena-loop1",
+      "package_root": "tasks/kfc/wre-runtime-memplan-arena-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -896,8 +896,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-sched-fair-vtc-roundrobin-loop16",
-      "package_root": "tasks/kfc/wre-sched-fair-vtc-roundrobin-loop16/task",
+      "task": "wre-sched-fair-vtc-roundrobin-loop1",
+      "package_root": "tasks/kfc/wre-sched-fair-vtc-roundrobin-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -922,8 +922,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-spec-accept-slot-compact-loop16",
-      "package_root": "tasks/kfc/wre-spec-accept-slot-compact-loop16/task",
+      "task": "wre-spec-accept-slot-compact-loop1",
+      "package_root": "tasks/kfc/wre-spec-accept-slot-compact-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -946,8 +946,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-stability-fused-gradclip-loop16",
-      "package_root": "tasks/kfc/wre-stability-fused-gradclip-loop16/task",
+      "task": "wre-stability-fused-gradclip-loop1",
+      "package_root": "tasks/kfc/wre-stability-fused-gradclip-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -972,8 +972,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-tp-allreduce-bias-fuse-loop16",
-      "package_root": "tasks/kfc/wre-tp-allreduce-bias-fuse-loop16/task",
+      "task": "wre-tp-allreduce-bias-fuse-loop1",
+      "package_root": "tasks/kfc/wre-tp-allreduce-bias-fuse-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -996,8 +996,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wre-verl-grpo-advantage-loop16",
-      "package_root": "tasks/kfc/wre-verl-grpo-advantage-loop16/task",
+      "task": "wre-verl-grpo-advantage-loop1",
+      "package_root": "tasks/kfc/wre-verl-grpo-advantage-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1022,8 +1022,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-brpc-rdma-blockpool-window-loop16",
-      "package_root": "tasks/kfc/wro-brpc-rdma-blockpool-window-loop16/task",
+      "task": "wro-brpc-rdma-blockpool-window-loop1",
+      "package_root": "tasks/kfc/wro-brpc-rdma-blockpool-window-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1046,8 +1046,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-colossalai-devicemesh-rank-collate-loop16",
-      "package_root": "tasks/kfc/wro-colossalai-devicemesh-rank-collate-loop16/task",
+      "task": "wro-colossalai-devicemesh-rank-collate-loop1",
+      "package_root": "tasks/kfc/wro-colossalai-devicemesh-rank-collate-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1072,8 +1072,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-deepspeed-curriculum-cluster-select-loop16",
-      "package_root": "tasks/kfc/wro-deepspeed-curriculum-cluster-select-loop16/task",
+      "task": "wro-deepspeed-curriculum-cluster-select-loop1",
+      "package_root": "tasks/kfc/wro-deepspeed-curriculum-cluster-select-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1096,8 +1096,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-gbench-bigo-least-squares-loop16",
-      "package_root": "tasks/kfc/wro-gbench-bigo-least-squares-loop16/task",
+      "task": "wro-gbench-bigo-least-squares-loop1",
+      "package_root": "tasks/kfc/wro-gbench-bigo-least-squares-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1120,8 +1120,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-gbench-counter-finalize-loop16",
-      "package_root": "tasks/kfc/wro-gbench-counter-finalize-loop16/task",
+      "task": "wro-gbench-counter-finalize-loop1",
+      "package_root": "tasks/kfc/wro-gbench-counter-finalize-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1144,8 +1144,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-megatron-moe-routing-fused-triton-loop16",
-      "package_root": "tasks/kfc/wro-megatron-moe-routing-fused-triton-loop16/task",
+      "task": "wro-megatron-moe-routing-fused-triton-loop1",
+      "package_root": "tasks/kfc/wro-megatron-moe-routing-fused-triton-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -1171,8 +1171,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-megatron-moe-routing-map-pad-loop16",
-      "package_root": "tasks/kfc/wro-megatron-moe-routing-map-pad-loop16/task",
+      "task": "wro-megatron-moe-routing-map-pad-loop1",
+      "package_root": "tasks/kfc/wro-megatron-moe-routing-map-pad-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1197,8 +1197,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-nccl-ib-multisend-wr-plan-loop16",
-      "package_root": "tasks/kfc/wro-nccl-ib-multisend-wr-plan-loop16/task",
+      "task": "wro-nccl-ib-multisend-wr-plan-loop1",
+      "package_root": "tasks/kfc/wro-nccl-ib-multisend-wr-plan-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1221,8 +1221,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-offload-layer-prefetch-ring-pipeline-loop16",
-      "package_root": "tasks/kfc/wro-offload-layer-prefetch-ring-pipeline-loop16/task",
+      "task": "wro-offload-layer-prefetch-ring-pipeline-loop1",
+      "package_root": "tasks/kfc/wro-offload-layer-prefetch-ring-pipeline-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1243,8 +1243,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-offload-policy-grid-search-loop16",
-      "package_root": "tasks/kfc/wro-offload-policy-grid-search-loop16/task",
+      "task": "wro-offload-policy-grid-search-loop1",
+      "package_root": "tasks/kfc/wro-offload-policy-grid-search-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1265,8 +1265,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-outlines-guide-transition-batch-loop16",
-      "package_root": "tasks/kfc/wro-outlines-guide-transition-batch-loop16/task",
+      "task": "wro-outlines-guide-transition-batch-loop1",
+      "package_root": "tasks/kfc/wro-outlines-guide-transition-batch-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1289,8 +1289,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-sbert-paraphrase-mining-loop16",
-      "package_root": "tasks/kfc/wro-sbert-paraphrase-mining-loop16/task",
+      "task": "wro-sbert-paraphrase-mining-loop1",
+      "package_root": "tasks/kfc/wro-sbert-paraphrase-mining-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1313,8 +1313,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-torchao-int8-rowwise-quant-loop16",
-      "package_root": "tasks/kfc/wro-torchao-int8-rowwise-quant-loop16/task",
+      "task": "wro-torchao-int8-rowwise-quant-loop1",
+      "package_root": "tasks/kfc/wro-torchao-int8-rowwise-quant-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [
@@ -1339,8 +1339,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-torchtitan-varlen-cu-seqlens-loop16",
-      "package_root": "tasks/kfc/wro-torchtitan-varlen-cu-seqlens-loop16/task",
+      "task": "wro-torchtitan-varlen-cu-seqlens-loop1",
+      "package_root": "tasks/kfc/wro-torchtitan-varlen-cu-seqlens-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1363,8 +1363,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-tvm-winograd-conv2d-transform-loop16",
-      "package_root": "tasks/kfc/wro-tvm-winograd-conv2d-transform-loop16/task",
+      "task": "wro-tvm-winograd-conv2d-transform-loop1",
+      "package_root": "tasks/kfc/wro-tvm-winograd-conv2d-transform-loop1/task",
       "layout": "task/",
       "gpus": 0,
       "dockerfiles": [
@@ -1387,8 +1387,8 @@
     },
     {
       "bench": "kfc",
-      "task": "wro-yogi-foreach-fused-loop16",
-      "package_root": "tasks/kfc/wro-yogi-foreach-fused-loop16/task",
+      "task": "wro-yogi-foreach-fused-loop1",
+      "package_root": "tasks/kfc/wro-yogi-foreach-fused-loop1/task",
       "layout": "task/",
       "gpus": 1,
       "dockerfiles": [

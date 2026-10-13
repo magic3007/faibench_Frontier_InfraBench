@@ -144,7 +144,7 @@ docker run --rm [--gpus all] -v "$PWD/tests:/tests:ro" -v "$PWD/solution:/patche
   -e KERNELBENCH_VERIFY_MODE=oracle -e KERNELBENCH_ORACLE_FILE=/patches/kernel_oracle.py
 ```
 
-自证:`noop`(不改动)应 ≈ no-op 值、`negative` 必须得 0。**83 题随包提供参考补丁/oracle**,可直接走这条通路;只有 2 题(`kfc/wro-offload-layer-prefetch-ring-pipeline-loop16`、`kfc/wro-offload-policy-grid-search-loop16`)没有,它们的 caveat 里已注明"锚点换硬件不可比,请自行标定"。
+自证:`noop`(不改动)应 ≈ no-op 值、`negative` 必须得 0。**83 题随包提供参考补丁/oracle**,可直接走这条通路;只有 2 题(`kfc/wro-offload-layer-prefetch-ring-pipeline-loop1`、`kfc/wro-offload-policy-grid-search-loop1`)没有,它们的 caveat 里已注明"锚点换硬件不可比,请自行标定"。
 
 **注意锚点解析链**:`tests/ref_speedup.txt` → 镜像内 `/opt/verifier-correctness-manifest.json` → 1.0。镜像内那份**故意不含真锚点**(它对做题者可读),而 `ref_speedup <= 1` 是 hard gate,所以**必须挂载 `tests/`**,否则会以"锚点无效"大声失败而不是给出错误分数。另外 `tests/ref_speedup.txt` 被 `tr -dc '0-9.'` 解析 —— **不要往里加任何注释**,含数字或小数点的文字会污染锚点值。
 

@@ -99,7 +99,7 @@ reward = 0.0  其它一切情况
 **`kfc` 全子集单次提交,与题型无关** —— 55 道都只有一次评分机会,分两种形态:
 
 - **50 道**装了 loop harness 但 `MIN_SUBMISSIONS=MAX_SUBMISSIONS=1`:第一次 `bash /opt/loop/submit.sh` 评分后**立即自动定稿**,没有第二次带分的尝试(再次调用只会重新定稿同一份已记录的快照,不给新改动评分)
-- **5 道**(`chunked-mlp-recompute`、`ckpt-dcp-meta-bbox-merge`、`mamba-zoh-discretize`、`s4-fft-longconv`、`wre-verl-grpo-advantage-loop16`)没有 `submit.sh`:改动留在工作树里,由会话结束后挂载的 `tests/test.sh` 一次性判分
+- **5 道**(`chunked-mlp-recompute`、`ckpt-dcp-meta-bbox-merge`、`mamba-zoh-discretize`、`s4-fft-longconv`、`wre-verl-grpo-advantage-loop1`)没有 `submit.sh`:改动留在工作树里,由会话结束后挂载的 `tests/test.sh` 一次性判分
 
 只有 **`lh`/`e2e` 的性能题**——共 **26 道**——跑 1~16 轮协议。上限 16 **不是硬要求**:agent 自行决定何时 `submit.sh --finalize` 收手(k=16 时自动定稿),不必凑满。实现类无论哪个子集都是单次。
 

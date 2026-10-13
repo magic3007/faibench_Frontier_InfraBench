@@ -267,7 +267,7 @@ GRADING (verifier mode = shared)
   The verifier's OWN mode (candidate / noop / oracle / negative / ...) is a different axis:
   --verify-task-mode. It is unset by default, so every task uses its own default (candidate).
   78 tasks read KERNELBENCH_VERIFY_MODE, 5 read VERIFIER_MODE, one each E5_MODE / B11_MODE,
-  and kfc/wre-verl-grpo-advantage-loop16 takes a POSITIONAL argument
+  and kfc/wre-verl-grpo-advantage-loop1 takes a POSITIONAL argument
   (`MODE="${1:-${WRE_MODE:-candidate}}"`) where an env var alone does nothing -- the runner
   detects which and delivers both when needed (--verify-mode-var / --verify-argv override).
   --live-anchor is OFF by default: 2 tasks will re-measure the anchor from the reference patch
@@ -287,11 +287,11 @@ FIRST-RUN SELF-CHECK SET (one task per capture shape; --agent none is the cheape
      --task e2e/a3-moe-train-budget               `# repo + non-git /app/submission` \\
      --task e2e/checkpoint-transfer-integrity     `# /app/submission only, no /app/repo` \\
      --task e2e/object-store-atomic               `# two independent single-commit repos` \\
-     --task kfc/wre-verl-grpo-advantage-loop16    `# repo + non-git /app/workspace, argv mode`
+     --task kfc/wre-verl-grpo-advantage-loop1    `# repo + non-git /app/workspace, argv mode`
   Then repeat with --agent oracle: every task should score its reference value (~0.5 for a
   performance task that exactly hits its anchor, 1.0 for a binary implementation task), and
   --agent oracle --oracle-variant negative MUST score 0. Two tasks
-  (kfc/wro-offload-layer-prefetch-ring-pipeline-loop16, kfc/wro-offload-policy-grid-search-loop16)
+  (kfc/wro-offload-layer-prefetch-ring-pipeline-loop1, kfc/wro-offload-policy-grid-search-loop1)
   ship no reference implementation: their solve.sh exits 2 and the runner records status=skipped.
 
 OUTPUT
@@ -555,7 +555,7 @@ class Task:
 
     def _mode_dispatch(self):
         """How this task's verifier picks its mode. 78 read KERNELBENCH_VERIFY_MODE, 5 read
-        VERIFIER_MODE, one each E5_MODE / B11_MODE, and kfc/wre-verl-grpo-advantage-loop16 takes
+        VERIFIER_MODE, one each E5_MODE / B11_MODE, and kfc/wre-verl-grpo-advantage-loop1 takes
         a POSITIONAL argument (`MODE="${1:-${WRE_MODE:-candidate}}"`) where an env var alone does
         nothing. 4 tasks deliberately strip inherited mode vars (frozen eval surface)."""
         m = re.search(r'^\s*(?:export\s+)?(?:MODE|VERIFIER_MODE|VMODE)=(.+)$',

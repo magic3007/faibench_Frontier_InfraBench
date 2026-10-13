@@ -97,7 +97,7 @@ Anti-cheat is not only these gates: before scoring, each task's `tests/test.sh` 
 **The entire `kfc` subset is single-submission, regardless of task type** — all 55 have exactly one scoring opportunity, in one of two forms:
 
 - **50 tasks** ship the loop harness but with `MIN_SUBMISSIONS=MAX_SUBMISSIONS=1`: the first `bash /opt/loop/submit.sh` scores and then **finalizes immediately**, with no second scored attempt (calling it again just re-finalizes the same recorded snapshot, without scoring new changes)
-- **5 tasks** (`chunked-mlp-recompute`, `ckpt-dcp-meta-bbox-merge`, `mamba-zoh-discretize`, `s4-fft-longconv`, `wre-verl-grpo-advantage-loop16`) have no `submit.sh`: changes are left in the working tree and scored once by `tests/test.sh` mounted after the session ends
+- **5 tasks** (`chunked-mlp-recompute`, `ckpt-dcp-meta-bbox-merge`, `mamba-zoh-discretize`, `s4-fft-longconv`, `wre-verl-grpo-advantage-loop1`) have no `submit.sh`: changes are left in the working tree and scored once by `tests/test.sh` mounted after the session ends
 
 Only the **`lh`/`e2e` performance tasks** — **26 in total** — run the 1–16 round protocol. The cap of 16 is **not a hard requirement**: the agent decides when to `submit.sh --finalize` and stop (auto-finalizes at k=16), and need not fill the quota. Implementation tasks are single-submission in every subset.
 
