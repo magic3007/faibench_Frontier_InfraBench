@@ -8,11 +8,13 @@
 
 ### 🔗 [faibench.org](https://faibench.org/)
 
+**Paper:** [arXiv:2609.10226](https://arxiv.org/abs/2609.10226) · [PDF](https://arxiv.org/pdf/2609.10226)
+
 [![License](https://img.shields.io/badge/license-Apache%202.0-blue.svg)](LICENSE)
 &nbsp;![tasks](https://img.shields.io/badge/tasks-85-brightgreen.svg)
 &nbsp;[![Website](https://img.shields.io/badge/Website-faibench.org-2563EB?logo=googlechrome&logoColor=white)](https://faibench.org/)
 &nbsp;[![Hugging Face Dataset](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Dataset-FFD21E)](https://huggingface.co/datasets/faibench-Frontier-Infra-Bench/faibench_Frontier_Infra_Bench)
-&nbsp;![arXiv](https://img.shields.io/badge/arXiv-coming%20soon-B31B1B?logo=arxiv&logoColor=white)
+&nbsp;[![arXiv](https://img.shields.io/badge/arXiv-2609.10226-B31B1B?logo=arxiv&logoColor=white)](https://arxiv.org/abs/2609.10226)
 
 ###### 🌐&nbsp; **English** &nbsp;·&nbsp; [简体中文](README.zh-CN.md)
 
