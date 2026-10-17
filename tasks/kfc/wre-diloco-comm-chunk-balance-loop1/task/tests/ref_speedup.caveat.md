@@ -1,6 +1,6 @@
 # ref_speedup 硬件/环境 caveat(开源版新增,不改变判分逻辑)
 
-`ref_speedup.txt` 里的 **1.29218** 是 oracle 标定常量,判分时只读、不重跑 oracle:
+`ref_speedup.txt` 里的 **1.66973** 是 oracle 标定常量,判分时只读、不重跑 oracle:
 
     reward = min(1.0, ln(speedup/ref_speedup)/ln(ref_speedup)) if speedup > ref_speedup else 0.0
 
@@ -31,13 +31,12 @@ docker run --rm -v "$PWD/tests:/tests:ro" -v "$PWD/solution:/patches:ro" \
 
 ✅ 本题**随包提供**参考实现的单文件变体(`solution/kernel_oracle.py`),所以重标定通路是**可直接执行**的。
 
-## 锚点必须严格低于可实现上限
+## 闸门必须包含 oracle 本身
 
-该题的指标是**确定性计数**（无测量噪声），因此存在一个可达的最大 speedup：
+该题的指标是**确定性字节总量**（最优 contiguous min-max partition 的瓶颈），oracle 是**可证最优解**，
+因此任何提交的绝对 speedup（= vs_oracle × ref_speedup）都不会超过 ref_speedup：
 
-- `oracle 是 contiguous min-max partition 的可证最优解，`baseline/oracle = 1.66973``
-- 旧锚点 `1.66973` 恰好等于该上限，而判分要求 `speedup > ref_speedup`，于是**任何提交（含 oracle）恒 0**。
-- 现锚点取 `sqrt(上限)` = `1.29218`：完成全部合并/最优划分时 `speedup = 上限`，`reward = ln(上限)/ln(锚点) - 1 = 1.0`；
-  部分完成按 `ln` 线性给分；朴素基线（speedup ≈ 1.0）仍为 0。
-
-不变式：**ref_speedup 必须严格小于可达上限**，且 `sqrt(上限)` 是让"最优解拿满分、部分解拿部分分"的唯一取值。
+- 旧判分要求 `speedup > ref_speedup`，这一条**没有任何提交能满足（含 oracle）**，恒 0；
+- 现判分改为 `speedup > 1`（越过基线）才计分，`reward = 0.5 · ln(speedup)/ln(ref_speedup)`：
+  oracle（speedup = ref_speedup）得 **0.5**，oracle² 封顶 1.0，朴素基线（speedup ≤ 1）得 0。
+- 不变式：确定性指标的锚点不能当"必须超过"的门槛，只能当 ln 标尺。
