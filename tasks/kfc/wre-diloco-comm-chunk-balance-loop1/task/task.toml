@@ -42,7 +42,7 @@ result_paths = ["/logs/verifier/reward.json"]
 name = "speedup"
 goal = "maximize"
 reward_formula = "performance: reward = min(1.0, ln(speedup/ref_speedup)/ln(ref_speedup)) if speedup > ref_speedup else 0.0; 0 if a hard gate fails or speedup <= 1."
-ref_speedup = 1.66973
+ref_speedup = 1.29218
 ref_speedup_source = "tests/ref_speedup.txt"
 calibrated_on = "Intel Sapphire Rapids CPU lane"
 
